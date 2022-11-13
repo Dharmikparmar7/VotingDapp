@@ -1,6 +1,6 @@
-.container {
+/* .container {
   padding: 0 2rem;
-}
+} */
 
 .main {
   min-height: 100vh;
@@ -116,14 +116,122 @@
 }
 
 @media (prefers-color-scheme: dark) {
+
   .card,
   .footer {
     border-color: #222;
   }
+
   .code {
     background: #111;
   }
+
   .logo img {
     filter: invert(1);
   }
+}
+
+.container {
+  margin: 0%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.devideTwo {
+  margin: auto;
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 0.2s ease-in;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #eaeaea;
+  border-radius: 7px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: white;
+}
+
+.button {
+  margin: 10px;
+  border-color: transparent;
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  width: 200px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.buttonBordered {
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.buttonBordered:hover, .buttonBordered:focus {
+  color: white;
+  background-color: black;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  border-color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0px 0px 2.2px rgba(0, 0, 0, 0.014),
+    0px 0px 5.3px rgba(0, 0, 0, 0.02),
+    0px 0px 10px rgba(0, 0, 0, 0.025),
+    0px 0px 17.9px rgba(0, 0, 0, 0.03),
+    0px 0px 33.4px rgba(0, 0, 0, 0.036),
+    0px 0px 80px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  padding: 40px;
+}
+
+.h1 {
+  text-align: center;
+}
+
+.listBox{
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  width: 50%;
+  border: #0070f3 solid 5px;
+}
+
+.list{
+  margin: 20px;
 }
