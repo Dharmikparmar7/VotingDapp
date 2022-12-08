@@ -1,4 +1,5 @@
 import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.css'
 import Web3Modal from "web3modal";
 import { providers } from "ethers";
 import { useEffect, useRef, useState } from "react";

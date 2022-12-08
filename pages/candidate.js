@@ -142,7 +142,7 @@ export default function Candidate(props) {
             <input className={styles.input} id="password" name="password" placeholder='Password' type="password" onChange={handleLoginValueChange} />
             <button className={styles.button} type='submit'> Login </button>
             <button className={`${styles.button} ${styles.buttonBordered}`} onClick={(e) => { e.preventDefault(); setToggleForm('register'); }}> Register </button>
-            <button onClick={switchVoter}> Go to Voter </button>
+            <button className={`${styles.button} ${styles.buttonBordered}`} onClick={switchVoter}> Go to Voter </button>
           </form>
         </div>
 

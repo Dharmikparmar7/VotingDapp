@@ -76,54 +76,58 @@ export default function home(props) {
 
     return (
         <>
-            {render()}
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Party</th>
-                        <th>Vote Count</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {votes.map(votes => {
-                        return (
-                            <tr>
-                                <td>{votes.name}</td>
-                                <td>{votes.party}</td>
-                                <td>{(votes.votes).toString()}</td>
-                            </tr>
-                        )
-                    })}
-                </tbody>
-            </table>
-            <table>
-                <tbody>
-                    <tr>
-                        <td>Nomination No.</td>
-                        <td>{(candidate.nominationNo).toString()}</td>
-                    </tr>
-                    <tr>
-                        <td>Name</td>
-                        <td>{candidate.name}</td>
-                    </tr>
-                    <tr>
-                        <td>Party</td>
-                        <td>{candidate.party}</td>
-                    </tr>
-                    <tr>
-                        <td>State Code</td>
-                        <td>{candidate.stateCode}</td>
-                    </tr>
-                    <tr>
-                        <td>Constituency Code</td>
-                        <td>{candidate.constituencyCode}</td>
-                    </tr>
-                </tbody>
-            </table>
-            <br />
-            <br />
-            <button onClick={logout}> Log out </button>
+            <div className='container'>
+            <h1 className='text-center mt-3'>Election Result</h1>
+                <table className="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Party</th>
+                            <th>Vote Count</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {votes.map(votes => {
+                            return (
+                                <tr>
+                                    <td>{votes.name}</td>
+                                    <td>{votes.party}</td>
+                                    <td>{(votes.votes).toString()}</td>
+                                </tr>
+                            )
+                        })}
+                    </tbody>
+                </table>
+                <h2 className='text-center mt-5'>Candidate Details</h2>
+                <table className="table table-striped table-hover">
+                    <tbody>
+                        <tr>
+                            <td>Nomination No.</td>
+                            <td>{(candidate.nominationNo).toString()}</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>{candidate.name}</td>
+                        </tr>
+                        <tr>
+                            <td>Party</td>
+                            <td>{candidate.party}</td>
+                        </tr>
+                        <tr>
+                            <td>State Code</td>
+                            <td>{candidate.stateCode}</td>
+                        </tr>
+                        <tr>
+                            <td>Constituency Code</td>
+                            <td>{candidate.constituencyCode}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br />
+                {render()}
+                <br />
+                <button className='btn btn-primary' onClick={logout}> Log out </button>
+            </div>
         </>
     )
 }

@@ -123,8 +123,8 @@ export default function home(props) {
     const print = () => {
         if (load) {
             return (
-                <div>
-                    <table>
+                <div className='container'>
+                    <table className="table table-striped table-hover">
                         <tbody>
                             {candidateList.map(candidateList => {
                                 return (
@@ -145,8 +145,8 @@ export default function home(props) {
     const thankyou = () => {
         if (thanks) {
             return (
-                <>
-                    <table>
+                <div className='container'>
+                    <table className="table table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -166,8 +166,8 @@ export default function home(props) {
                             })}
                         </tbody>
                     </table>
-                    <h1> Thank you </h1>
-                </>
+                    <h3 className='text-center'>You have already voted. Thank you! </h3>
+                </div>
             );
         }
     }
@@ -179,12 +179,13 @@ export default function home(props) {
     }
 
     return (
-        <div>
+        <div className='container'>
+            <h1 className='text-center mt-3'>Election Result</h1>
             {print()}
             {render()}
             {thankyou()}
 
-            <button onClick={logout}> Log out </button>
+            <button className='btn btn-primary' onClick={logout}> Log out </button>
         </div>
     );
 }
