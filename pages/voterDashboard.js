@@ -157,7 +157,7 @@ export default function home(props) {
                         <tbody>
                             {votes.map(votes => {
                                 return (
-                                    <tr>
+                                    <tr key={votes.name}>
                                         <td>{votes.name}</td>
                                         <td>{votes.party}</td>
                                         <td>{(votes.votes).toString()}</td>
