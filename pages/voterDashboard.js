@@ -4,7 +4,7 @@ import { Contract } from "ethers";
 import { CONTRACT_ADDRESS, abi } from "../constants";
 import { useRouter } from 'next/router';
 
-export default function home(props) {
+export default function Home(props) {
     const { getProviderOrSigner } = props;
 
     const [loading, setLoading] = useState(false);
